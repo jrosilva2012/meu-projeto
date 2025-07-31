@@ -36,6 +36,7 @@ body {
     font-weight: 900;
     background: linear-gradient(120deg, #FFD700, #B8860B);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     animation: glowGold 2s infinite alternate;
     text-shadow: 0 0 15px rgba(218,165,32,0.6);
@@ -77,8 +78,4 @@ body {
     background-color: #555; /* Cor cinza para desabilitado */
     cursor: not-allowed;
     opacity: 0.7;
-}
-.button:disabled:hover {
-    background-color: #555; /* Manter a cor cinza */
-    transform: none;
 }
