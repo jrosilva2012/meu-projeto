@@ -10,15 +10,16 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #f06, #60f);
-    color: #fff;
+    background: linear-gradient(135deg, #111, #222);
+    color: #DAA520; /* Cor dourada */
     text-align: center;
 }
 
 .container {
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.3);
     padding: 50px;
     border-radius: 15px;
+    border: 1px solid rgba(218,165,32,0.5);
     animation: fadeIn 1.5s ease-in-out;
 }
 
@@ -26,16 +27,18 @@ body {
     font-size: 2.5rem;
     margin-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
+    color: #FFD700; /* Dourado mais brilhante */
 }
 
 .name {
     font-size: 5rem;
     font-weight: 900;
-    background: -webkit-linear-gradient(#eee, #333);
+    background: linear-gradient(120deg, #FFD700, #B8860B);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: glow 2s infinite alternate;
+    color: transparent;
+    animation: glowGold 2s infinite alternate;
+    text-shadow: 0 0 15px rgba(218,165,32,0.6);
 }
 
 @keyframes fadeIn {
@@ -43,6 +46,39 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes glow {
-    to { text-shadow: 0 0 20px rgba(255,255,255,0.8); }
+@keyframes glowGold {
+    to { text-shadow: 0 0 30px #DAA520; }
+}
+.button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #DAA520; /* Cor dourada */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.button:hover {
+    background-color: #FFD700; /* Dourado mais brilhante */
+    transform: scale(1.05);
+}
+.button:active {
+    transform: scale(0.95);
+}
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(218,165,32, 0.5);
+}
+.button:disabled {
+    background-color: #555; /* Cor cinza para desabilitado */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+.button:disabled:hover {
+    background-color: #555; /* Manter a cor cinza */
+    transform: none;
 }
